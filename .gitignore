@@ -2,6 +2,19 @@
 Thumbs.db
 ehthumbs.db
 
+.idea
+.gitignore
+/*.php
+/*.html
+wp-admin
+wp-includes
+wp-content/*.php
+wp-content/languages
+wp-content/plugins
+wp-content/uploads
+wp-content/themes/twentyten
+wp-content/themes/twentyeleven
+
 # Folder config file
 Desktop.ini
 

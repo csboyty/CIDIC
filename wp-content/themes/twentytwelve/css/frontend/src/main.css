@@ -1,0 +1,526 @@
+@font-face {
+    font-family: 'Helvetica';
+    src:url('../../../fonts/Helvetica.otf');
+    src:url('../../../fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaLight';
+    src:url('../../../fonts/Helvetica-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    padding:0px;
+    margin: 0px;
+    font-size: 14px;
+    font-family:"Helvetica","Arial","微软雅黑","黑体";
+    background: #fff;
+    color:#000;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+img{
+    border: none;
+}
+ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+}
+.hidden{
+    display: none!important;
+}
+.disable{
+    display: none!important;
+}
+.textEllipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.wrapper{
+    width: 950px;
+    margin: auto;
+}
+.header{
+
+}
+/**
+*logo
+*/
+.logo{
+    display: inline-block;
+    margin: 20px 0px 0px 0px;
+}
+.logo a{
+    width: 141px;
+    height:91px;
+    font-size:0px;
+    display: block;
+    background: url(../../../images/frontend/app/logo.jpg) no-repeat;
+}
+/**
+*menu
+*/
+.menu-main-container{
+    display: inline-block;
+    vertical-align: bottom;
+    float: right;
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+.menu{
+    margin: auto;
+    font-size: 0px;
+}
+.menu>.menu-item{
+    vertical-align: top;
+    position: relative;
+    margin-left: -12px;
+}
+.menu>.menu-item>a{
+    width: 129px;
+    height: 11px;
+    line-height: 11px;
+    display: block;
+    font-family:"Helvetica","Arial","微软雅黑","黑体";
+    color:#363636;
+    font-size: 11px;
+    text-align: center;
+    background: url(../../../images/frontend/app/menuItemBg.png) no-repeat;
+}
+.menu>.menu-item:first-child>a{
+    background: none;
+}
+.menu>.menu-item>a:hover{
+    color:#fff;
+    background: url(../../../images/frontend/app/menuItemHoverBg.png) no-repeat !important;
+}
+.menu>.current-menu-item>a,
+.menu>.current-post-ancestor>a,.menu>.current-category-ancestor>a{
+    font-weight: bold;
+    color:#000;
+}
+.menu .sub-menu{
+    position: absolute;
+    top:10px;
+    display: none;
+    z-index: 10;
+}
+.menu .current-menu-ancestor .sub-menu,.menu .current-menu-item .sub-menu,
+.menu .current-post-ancestor .sub-menu{
+    display: block;
+    z-index: 1;
+}
+.menu .sub-menu .menu-item{
+    margin-left: 0px;
+    margin-top: 10px;
+}
+.menu .sub-menu .menu-item a{
+    width: 200px;
+    padding-left: 20px;
+    height: 10px;
+    line-height: 10px;
+    display: block;
+    color:#fff;
+    font-size: 10px;
+    background: url(../../../images/frontend/app/subMenuItemBg.png) no-repeat;
+}
+.menu .sub-menu .current-menu-item>a,
+.menu .sub-menu .current-post-ancestor>a,.menu .sub-menu .current-category-ancestor>a{
+    font-weight: bold;
+    color:#262626;
+}
+.main{
+    margin-top: 50px;
+}
+/**
+*首页文章
+*/
+.hotPost{
+    position:relative;
+    width: 100%;
+}
+.hotPost .infoContainer{
+    position: absolute;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    z-index: 10;
+    background: #f6f7f1;
+    width: 340px;
+    padding: 15px 20px;
+    height: 170px;
+    top: 50px;
+}
+.hotPost .infoContainer .title{
+    margin-top: 0px;
+    font-size: 28px;
+    line-height: 35px;
+}
+.hotPost .infoContainer .excerpt{
+    line-height: 20px;
+    font-size: 16px;
+}
+.hotPost .hotPostListContainer{
+    width:100%;
+    overflow: hidden;
+}
+.hotPost .hotPostListContainer .hotPostList{
+    white-space: nowrap;
+    font-size: 0px;
+    width: 100%;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+.hotPost .hotPostListContainer .hotPostList li{
+    display: inline-block;
+}
+
+.hotPost .hotPostListContainer .info{
+    display: none;
+}
+.hotPost .hotPostListContainer .thumb{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hotPost .hotPostListContainer .navBtn{
+    position: absolute;
+    top:50%;
+    width: 80px;
+    height: 80px;
+    display: block;
+    font-size: 0px;
+    cursor: pointer;
+    z-index: 5;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+.hotPost .hotPostListContainer .prevBtn{
+    left:50px;
+    background: url(../../../images/frontend/app/btnPrev.png) no-repeat #9c9c9c;
+}
+.hotPost .hotPostListContainer .nextBtn{
+    right:50px;
+    background: url(../../../images/frontend/app/btnNext.png) no-repeat #9c9c9c;
+}
+/**
+*首页分类
+*/
+.categoryList{
+    width: 100%;
+    margin-top: 30px;
+    font-size: 0px;
+}
+.categoryList li{
+    width: 308px;
+    height: 400px;
+    background: #f6f7f1;
+    vertical-align: top;
+}
+.categoryList li:hover{
+    background: #eeeeee;
+}
+.categoryList li:first-child+li{
+    margin:0px 13px;
+}
+.categoryList li a{
+    width: 100%;
+    display: block;
+    padding:30px 22.5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.categoryList .title{
+    color:#eb6a54;
+    font-weight: lighter;
+    font-family: "HelveticaLight","Helvetica","Arial","微软雅黑","黑体";
+    font-size: 17px;
+}
+.categoryList .excerpt{
+    font-size: 16px;
+    line-height: 20px;
+    color:#3e3e3e;
+}
+/**
+*首页分类详情
+*/
+.categorySection{
+    width: 100%;
+    padding: 137px 0px 120px 0px;
+    background: #f6f7f1;
+    margin-top: 30px;
+}
+.categorySection>.title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 137px;
+    margin-top: 0px;
+    font-size: 38px;
+    font-weight: normal;
+    font-family: "HelveticaLight","Helvetica","Arial","微软雅黑","黑体";
+    color:#5c5c5c;
+}
+.categorySection .detail{
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin:40px auto 0px auto;
+    border: 1px solid #7b7b7a;
+    text-align: center;
+    background: #fff;
+    text-transform: uppercase;
+}
+.categorySection .detail:hover{
+    color:#fff;
+    background: #7b7b7a;
+}
+.cPostList{
+    margin: 0px auto 0px auto;
+    width: 648px;
+}
+.cPostList li{
+    background: #e4e5e1;
+    width: 100%;
+    margin-bottom: 13px;
+}
+.cPostList li:hover{
+    background: #dadbd8;
+}
+.cPostList li a{
+    display: block;
+    font-size: 0px;
+}
+.cPostList .thumb{
+    width: 310px;
+    height: auto;
+    display: inline-block;
+}
+.cPostList .title{
+    width:280px;
+    margin-left: 23px;
+    color:#5c5c5c;
+    margin-top: 48px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    font-family: "HelveticaLight","Helvetica","Arial","微软雅黑","黑体";
+    display: inline-block;
+    vertical-align: top;
+}
+.pPostList{
+    width: 872px;
+    font-size: 0px;
+    margin: 0px auto 0px auto;
+}
+.pPostList li{
+    width: 426px;
+    margin: 5px;
+    position: relative;
+    height: 316px;
+    overflow: hidden;
+}
+.pPostList .title{
+    width: 226px;
+    height: 216px;
+    padding: 100px 100px 0px 100px;
+    background: #eee;
+    opacity: .9;
+    filter: alpha(opacity=90);
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: normal;
+    font-family: "HelveticaLight","Helvetica","Arial","微软雅黑","黑体";
+    position: absolute;
+    top:-100%;
+    left:0px;
+    margin: 0px;
+    transition:all .4s linear;
+    text-align: center;
+    overflow: hidden;
+}
+.pPostList li:hover .title{
+    top:0px;
+}
+
+/**
+*底部
+*/
+.goToTop{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background: url(../../../images/frontend/app/top.png) no-repeat;
+    bottom:100px;
+    right: 0px;
+    font-size: 0px;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+/**
+* 分类页文章列表
+*/
+.postList{
+    border-top:1px solid #ccc;
+    margin-left: 280px;
+}
+.postList li a{
+    border-bottom: 1px solid #ccc;
+    padding:35px 0px;
+    width: 100%;
+    display: block;
+}
+.postList li a:hover{
+    background: #f7f7f7;
+}
+.postList li .dateContainer{
+    display: inline-block;
+    vertical-align: top;
+}
+.postList li .dateContainer .month{
+    display: block;
+    font-size: 18px;
+    color:#525252;
+}
+.postList li .dateContainer .segmentation{
+    display: block;
+    width:20px;
+    border-top: 1px solid #898989;
+    font-size: 0px;
+    height: 1px;
+    margin: 5px 0px;
+}
+.postList li .dateContainer .day{
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color:#525252;
+}
+.postList li .thumbContainer{
+    display: inline-block;
+    vertical-align: top;
+    width:310px;
+    height: 210px;
+    margin-left: 20px;
+}
+.postList li .thumbContainer img{
+    width: 100%;
+    height: auto;
+}
+.postList li .infoContainer{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    width:251px;
+    padding-right: 20px;
+
+}
+.postList li .infoContainer .title{
+    margin:0px 0px 15px 0px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+}
+.postList li .infoContainer .date{
+    color:#525252;
+}
+.postList li .infoContainer .excerpt{
+    font-size:14px;
+    line-height: 20px;
+    overflow: hidden;
+    color:#525252;
+}
+/**
+*分页
+*/
+.page-numbers{
+    padding:30px 0px;
+    text-align: left;
+    margin-left: 280px;
+}
+.pageContainer .page-numbers{
+    margin: 0px;
+    text-align: center;
+}
+.page-numbers li a,.page-numbers li span{
+    text-decoration: none;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    color: #525252;
+    margin: 0px;
+    display: inline-block;
+}
+.page-numbers li .current,.page-numbers li a:hover {
+    font-weight: bold;
+    color:#000;
+}
+/**
+* 文章详情页
+*/
+.content{
+    margin-left: 280px;
+}
+.content h1{
+    font-size: 20px;
+    margin: 40px 0px;
+}
+.content h2{
+    font-size: 16px;
+    margin: 30px 0px;
+}
+.content h3{
+    font-size: 15px;
+    font-weight: normal;
+    margin: 20px 0px;
+}
+.content h4{
+    font-size: 14px;
+    font-weight: normal;
+    margin: 20px 0px;
+}
+.content h5{
+    font-size: 13px;
+    font-weight: normal;
+    margin: 20px 0px;
+}
+.content h6{
+    font-size: 12px;
+    font-weight: normal;
+    margin: 20px 0px;
+}
+.content .wp-caption-text{
+    margin-top: 3px;
+    margin-bottom: 50px;
+    font-size: 10px;
+    line-height: 15px;
+    padding-bottom:20px;
+    border-bottom: 1px solid #898989;
+}
+.content img{
+    display: block;
+    max-width: 100% !important;
+    margin:auto;
+}
+.content p{
+    font-size: 14px;
+    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
