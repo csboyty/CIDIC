@@ -1,5 +1,6 @@
 <?php get_header(); ?>
     <div class="main">
+        <h2 class="categoryTitle"><?php single_cat_title(); ?></h2>
         <ul class="postList">
             <?php while (have_posts()) : the_post();
 
@@ -18,9 +19,9 @@
                     }
                 }
                 $date=get_the_date();
-                $date_array=explode("/",$date);
+                $date_array=explode("-",$date);
                 $month=$date_array[1];
-                $day=$date_array[0];
+                $day=$date_array[2];
                 ?>
                 <li>
                     <a href="<?php the_permalink(); ?>">

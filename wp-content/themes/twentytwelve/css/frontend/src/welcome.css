@@ -1,0 +1,140 @@
+body{
+    overflow: hidden;
+}
+.welcomeContainer{
+    position: fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #fff;
+    z-index: 10;
+}
+.welcomeContainer .logoContainer{
+    width:1024px;
+    height: 75%;
+    margin: auto;
+    position: relative;
+}
+.welcomeContainer .logoImg{
+    display: block;
+    width: 722px;
+    height: 290px;
+    position: absolute;
+    left:0px;
+    top:50%;
+    margin-top: -18%;
+    font-size: 0px;
+    background: url(../../../images/frontend/welcome/homeLogo.jpg) no-repeat;
+}
+.welcomeContainer .sites{
+    width: 50px;
+    position: absolute;
+    top:25%;
+    right: 15%;
+}
+.welcomeContainer .sites li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius:25px ;
+    background: #f3f2f2;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: "HelveticaLight","Helvetica","Arial","微软雅黑","黑体";
+    margin: 10px 0px;
+}
+.welcomeContainer .sites li:first-child a{
+    background: #000;
+    color:#fff;
+}
+.welcomeContainer .sites li a:hover{
+    -webkit-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    transform:scale(0.9);
+    transform-origin:center center;
+    -webkit-transform-origin:center center;
+    -moz-transform-origin:center center;
+    transition:all .1s linear;
+    -web-transition:all .1s linear;
+    -moz-transition:all .1s linear;
+}
+.welcomeContainer .sites li:last-child a{
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+.welcomeContainer .arrowTop{
+    font-size: 0px;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    height: 76px;
+    width: 100%;
+    background: url(../../../images/frontend/welcome/arrow.png) no-repeat;
+    display: block;
+}
+.welcomeContainer .bottomContainer{
+    position: absolute;
+    top:75%;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    min-width: 1024px;
+    background: #f3f2f2;
+}
+
+.welcomeContainer .cooperation{
+    width: 1024px;
+    margin: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 0px;
+    height: 100%;
+}
+.welcomeContainer .cooperation li{
+    width: 25%;
+    margin: 0px 4%;
+    height: 100%;
+}
+.welcomeContainer .cooperation li p{
+    border-left: 1px solid #000;
+    border-right:1px solid #000;
+    font-size: 16px;
+    font-family: "HelveticaLight","Helvetica","Arial","微软雅黑","黑体";
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.welcomeContainer .cooperation li:hover p{
+    -webkit-transition:1.5s ease all;
+    -moz-transition:1.5s ease all;
+    transition:1.5s ease all;
+    opacity:0.8;
+    filter: alpha(opacity=80);
+}
+.welcomeContainer .cooperation li img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-height: 768px) {
+    .welcomeContainer .cooperation li{
+        padding:1.5% 0px 0px 0px;
+    }
+    .welcomeContainer .sites{
+        top:35%;
+    }
+}
+@media screen and (min-height: 1080px) {
+    .welcomeContainer .cooperation li{
+        padding:2% 0px 0px 0px;
+    }
+    .welcomeContainer .sites{
+        top:40%;
+    }
+}

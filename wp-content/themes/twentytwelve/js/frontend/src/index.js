@@ -89,10 +89,10 @@ $(document).ready(function(){
         row:3
     });
 
-    $("#postList .title").ellipsis({
+    $(".postList .title").ellipsis({
         row:2
     });
-    $("#postList .excerpt").ellipsis({
+    $(".postList .excerpt").ellipsis({
         row:4
     });
 
@@ -156,4 +156,19 @@ $(document).ready(function(){
             $(".sub-menu").hide();
         }
     });
+
+    $(".main").css("minHeight",$("body").height()-215);
+
+
+    //隐藏欢迎界面
+    $("#sites a:eq(1)").click(function(){
+        $("#welcomeContainer").remove();
+        $("body").css("overflow","auto");
+        return false;
+    });
+
+    if(location.href.indexOf("#no_welcome")!=-1){
+        $("body").css("overflow","auto");
+        $("#welcomeContainer").addClass("hidden");
+    }
 });

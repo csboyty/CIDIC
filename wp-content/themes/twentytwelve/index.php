@@ -5,7 +5,7 @@ $services_id=3;
 $headline_id=10;
 
 ?>
-
+    <link href="<?php echo get_template_directory_uri(); ?>/css/frontend/src/welcome.css" rel="stylesheet" type="text/css">
     <div class="main">
         <div class="hotPost">
             <div class="infoContainer" id="hotPostInfo">
@@ -39,7 +39,7 @@ $headline_id=10;
                         <a href="<?php the_permalink(); ?>">
                             <div class="info">
                                 <h3 class="title" title="<?php the_title(); ?>"><?php the_title(); ?></h3>
-                                <p class="excerpt" title="<?php echo get_the_excerpt(); ?>">d<?php echo get_the_excerpt(); ?></p>
+                                <p class="excerpt" title="<?php echo get_the_excerpt(); ?>"><?php echo get_the_excerpt(); ?></p>
                             </div>
                             <img class="thumb" src="<?php echo $background_src; ?>">
                         </a>
@@ -119,13 +119,13 @@ $headline_id=10;
             </ul>
             <a href="<?php echo get_category_link($services_categories[0]->cat_ID); ?>" class="detail">More</a>
         </div>
-        <div class="categorySection hidden" id="category0">
+        <div class="categorySection hidden" id="category1">
             <h3 class="title"><?php echo $services_categories[1]->name; ?></h3>
-            <ul class="cPostList">
+            <ul class="pPostList">
                 <?php
                 $posts_zero=get_posts(array(
                     "category"=>$services_categories[1]->cat_ID,
-                    'posts_per_page'=> 3
+                    'posts_per_page'=> 4
                 ));
 
                 foreach($posts_zero as $post){
@@ -160,7 +160,7 @@ $headline_id=10;
         </div>
         <div class="categorySection hidden" id="category2">
             <h3 class="title"><?php echo $services_categories[2]->name; ?></h3>
-            <ul class="pPostList">
+            <ul class="cPostList">
                 <?php
                 $posts_zero=get_posts(array(
                     "category"=>$services_categories[2]->cat_ID,
@@ -198,4 +198,32 @@ $headline_id=10;
         </div>
 
         <span class="goToTop hidden" id="goToTop">Top</span>
+
+
+        <div class="welcomeContainer" id="welcomeContainer">
+            <div class="logoContainer">
+                <h1 class="logoImg"><?php echo get_bloginfo("name"); ?></h1>
+                <ul class="sites" id="sites">
+                    <li><a href="<?php echo get_blog_details(2)->siteurl;?>">中文</a></li>
+                    <li><a href="<?php echo get_blog_details(1)->siteurl;?>">EN</a></li>
+                </ul>
+                <span class="arrowTop">三角形</span>
+            </div>
+            <div class="bottomContainer">
+                <ul class="cooperation">
+                    <li>
+                        <p>乔治亚罗设计中国总代理</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/frontend/welcome/giugiaro.png">
+                    </li>
+                    <li>
+                        <p>湖南省工业设计创新平台</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/frontend/welcome/hnid.png">
+                    </li>
+                    <li>
+                        <p>湖南大学设计产学研基地</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/frontend/welcome/hnudesign.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
 <?php get_footer(); ?>
