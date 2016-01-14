@@ -169,13 +169,13 @@ ul li{
     top: 50px;
 }
 .hotPost .infoContainer .title{
-    margin-top: 0px;
-    font-size: 28px;
-    line-height: 35px;
+    margin-top: 28px;
+    font-size: 26px;
+    line-height: 30px;
 }
 .hotPost .infoContainer .excerpt{
     line-height: 20px;
-    font-size: 16px;
+    font-size: 14px;
 }
 .hotPost .hotPostListContainer{
     width:100%;
@@ -258,7 +258,7 @@ ul li{
     text-transform: uppercase;
 }
 .categoryList .excerpt{
-    font-size: 16px;
+    font-size: 13px;
     line-height: 20px;
     color:#3e3e3e;
 }
@@ -373,7 +373,7 @@ ul li{
     height: 80px;
     background: url(../../../images/frontend/app/top.png) no-repeat;
     bottom:100px;
-    right: 0px;
+    right: 20px;
     font-size: 0px;
     cursor: pointer;
 }

@@ -373,7 +373,7 @@ ul li{
     height: 80px;
     background: url(../../../images/frontend/app/top.png) no-repeat;
     bottom:100px;
-    right: 0px;
+    right: 20px;
     font-size: 0px;
     cursor: pointer;
 }
@@ -574,8 +574,6 @@ ul li{
 .content p{
     font-size: 14px;
     line-height: 20px;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 .content a{
     color:#18498d;

@@ -55,7 +55,7 @@ var index=(function(){
 
     function setHotEllipse(){
         $("#hotPostInfo .title").ellipsis({
-            row: 3
+            row: 2
         });
         $("#hotPostInfo .excerpt").ellipsis({
             row: 2
